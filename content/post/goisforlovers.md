@@ -1,21 +1,12 @@
 +++
-title = "(Hu)go Template Primer"
+categories = ["Development", "golang"]
+date = "2014-04-02T00:00:00Z"
 description = "Hugo uses the excellent go library for its template engine. "
-tags = [
-    "go",
-    "golang",
-    "templates",
-    "themes",
-    "development",
-]
-date = "2014-04-02"
-categories = [
-    "Development",
-    "golang",
-]
-menu = "main"
-+++
+tags = ["go", "golang", "templates", "themes", "development"]
+title = "(Hu)go Template Primer"
+[menu.main]
 
++++
 Hugo uses the excellent [go][] [html/template][gohtmltemplate] library for
 its template engine. It is an extremely lightweight engine that provides a very
 small amount of logic. In our experience that it is just the right amount of
