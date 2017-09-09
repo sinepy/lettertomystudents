@@ -1,15 +1,17 @@
 ---
-date: 2014-03-10
+date: 2014-03-10 00:00:00 +0000
 linktitle: Migrating from Jekyll
+prev: "/tutorials/mathjax"
+title: Migrate to Hugo from Jekyll
+description: Jekyll has a rule that any directory not starting with `_` will be copied
+  as-is to the `_site` output.
+weight: 10
 menu:
   main:
     parent: tutorials
-prev: /tutorials/mathjax
-title: Migrate to Hugo from Jekyll
-description: Jekyll has a rule that any directory not starting with `_` will be copied as-is to the `_site` output.
-weight: 10
----
+    weight: 10
 
+---
 ## Move static content to `static`
 Jekyll has a rule that any directory not starting with `_` will be copied as-is to the `_site` output. Hugo keeps all static content under `static`. You should therefore move it all there.
 With Jekyll, something that looked like
@@ -28,7 +30,7 @@ should become
 Additionally, you'll want any files that should reside at the root (such as `CNAME`) to be moved to `static`.
 
 ## Create your Hugo configuration file
-Hugo can read your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the [Hugo configuration documentation](/overview/configuration/) for details.
+Hugo can rrrread your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the [Hugo configuration documentation](/overview/configuration/) for details.
 
 ## Set your configuration publish folder to `_site`
 The default is for Jekyll to publish to `_site` and for Hugo to publish to `public`. If, like me, you have [`_site` mapped to a git submodule on the `gh-pages` branch](http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html), you'll want to do one of two alternatives:
