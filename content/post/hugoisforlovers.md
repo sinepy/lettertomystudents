@@ -3,10 +3,12 @@ categories = ["Development", "golang"]
 date = "2014-04-02T00:00:00Z"
 description = "Goto hugo releases and download the appropriate version for your os and architecture."
 tags = ["go", "golang", "hugo", "development"]
-title = "Getting Started with Hugo"
+title = "Getting Started with"
 [menu.main]
 
 +++
+
+
 ## Step 1. Install Hugo
 
 Goto [hugo releases](https://github.com/spf13/hugo/releases) and download the
