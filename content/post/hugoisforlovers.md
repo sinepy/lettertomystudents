@@ -16,7 +16,7 @@ appropriate version for your os and architecture.
 
 Save it somewhere specific as we will be using it in the next step.
 
-More complete instructions are available at [installing hugo](/overview/installing/)
+More complete instructisons are available at [installing hugo](/overview/installing/)
 
 ## Step 2. Build the Docs
 
@@ -39,11 +39,11 @@ Corresponding pseudo commands:
 git clone https://github.com/spf13/hugo
 cd hugo
 /path/to/where/you/installed/hugo server --source=./docs
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Press ctrl+c to stop
+&amp;gt; 29 pages created
+&amp;gt; 0 tags index created
+&amp;gt; in 27 ms
+&amp;gt; Web Server is available at http://localhost:1313
+&amp;gt; Press ctrl+c to stop
 
 ```
 
@@ -57,12 +57,12 @@ Now we are going to run hugo again, but this time with hugo in watch mode.
 
 ```
 /path/to/hugo/from/step/1/hugo server --source=./docs --watch
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Watching for changes in /Users/spf13/Code/hugo/docs/content
-&gt; Press ctrl+c to stop
+&amp;gt; 29 pages created
+&amp;gt; 0 tags index created
+&amp;gt; in 27 ms
+&amp;gt; Web Server is available at http://localhost:1313
+&amp;gt; Watching for changes in /Users/spf13/Code/hugo/docs/content
+&amp;gt; Press ctrl+c to stop
 
 ```
 
@@ -76,11 +76,11 @@ are located at the same relative location as the url, in our case
 Change and save this file.. Notice what happened in your terminal.
 
 ```
-&gt; Change detected, rebuilding site
+&amp;gt; Change detected, rebuilding site
 
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 26 ms
+&amp;gt; 29 pages created
+&amp;gt; 0 tags index created
+&amp;gt; in 26 ms
 
 ```
 
