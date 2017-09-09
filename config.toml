@@ -1,6 +1,6 @@
 # Site settings
 baseurl = "https://sinepy.github.io/lettertomystudents/"
-publishDir = "docs"
+
 # HTML Language Code Reference, such as en, zh-cn
 languageCode = "en"
 title = "Letter To My Students"
