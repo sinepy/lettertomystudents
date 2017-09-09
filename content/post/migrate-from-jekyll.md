@@ -4,7 +4,7 @@ description: Jekyll has a rule that any directory not starting with `_` will be 
   as-is to the `_site` output.
 linktitle: Migrating from Jekyll
 prev: "/tutorials/mathjax"
-title: This is a new title
+title: This is a new title for this
 weight: 10
 menu:
   main:
