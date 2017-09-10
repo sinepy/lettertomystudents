@@ -29,18 +29,22 @@ jobs:
 
       - run:
           name: "generate website"
-          command: cd ~/project && hugo
+          command: cd ~/project && hugo -d publiccc
 
       - run:
           name: "list stuff"
           command: cd ~/project && ls -la
+
+      - run:
+          name: "list public stuff"
+          command: cd ~/project/public && ls -la
 
 
       - deploy:
           name: Deploy to S3 if tests pass and branch is Master
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              aws s3 sync ~project/public s3://lettertomystudents/ --delete
+              aws s3 sync publiccc s3://lettertomystudents/ --delete
             else
               echo "Not master branch so not deploying"
             fi
