@@ -1,0 +1,11 @@
+{
+  "name": "lettertomystudents",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/sinepy/lettertomystudents.git",
+  "author": "Paolo Rentero",
+  "license": "MIT",
+  "devDependencies": {
+    "datocms-client": "^0.3.27"
+  }
+}
