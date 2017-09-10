@@ -12,6 +12,10 @@ jobs:
           command: cd ~/project && yarn
 
       - run:
+          name: "aws"
+          command: pip install awscli --upgrade --user
+
+      - run:
           name: "hugo"
           command: wget https://github.com/spf13/hugo/releases/download/v0.19/hugo_0.19-64bit.deb
 
