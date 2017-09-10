@@ -1,25 +1,39 @@
-machine:
-  node:
-    version: 6.7.0
-dependencies:
-  override:
-    # if your project uses Yarn as package manager, replace "npm install" with "yarn"
-    - yarn
-    # download latest version of hugo
-    - wget https://github.com/spf13/hugo/releases/download/v0.19/hugo_0.19-64bit.deb
-    # install it
-    - sudo dpkg -i hugo*.deb
-test:
-  override:
-    # first dump all the remote content as local files
-    - ./node_modules/.bin/dato dump
-    # then generate the website
-    - hugo
-deployment:
-  production:
-    branch: master
-    commands:
-      - aws s3 sync public s3://lettertomystudents/ --delete
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:6.7.0
+
+    steps:
+      - run:
+          name: "npm"
+          command: npm install
+
+      - run:
+          name: "hugo"
+          command: wget https://github.com/spf13/hugo/releases/download/v0.19/hugo_0.19-64bit.deb
+
+      - run:
+          name: "install hugo"
+          command: sudo dpkg -i hugo*.deb
+
+      - run:
+          name: "dump"
+          command: /node_modules/.bin/dato dump
+
+      - run:
+          name: "generate website"
+          command: hugo
+
+      - deploy:
+          name: Deploy to S3 if tests pass and branch is Master
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              aws s3 sync public s3://lettertomystudents/ --delete
+            else
+              echo "Not master branch so not deploying"
+            fi
 
 notify:
   webhooks:
