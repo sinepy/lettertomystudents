@@ -12,10 +12,6 @@ jobs:
           command: yarn
 
       - run:
-          name: Install dependencies
-          command: sudo apt-get -y -qq install awscli
-
-      - run:
           name: "download"
           command: wget https://github.com/gohugoio/hugo/releases/download/v0.26/hugo_0.26_Linux-64bit.deb
 
@@ -29,11 +25,15 @@ jobs:
 
       - run:
           name: "dump"
-          command: /node_modules/.bin/dato dump
+          command: ./node_modules/.bin/dato dump
 
       - run:
           name: "generate website"
           command: hugo -v
+
+      - run:
+          name: Install dependencies
+          command: sudo apt-get -y -qq install awscli
 
       - deploy:
           name: Deploy to S3 if tests pass and branch is Master
