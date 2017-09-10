@@ -3,13 +3,13 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:6.10
+      - image: circleci/node:latest
     working_directory: ~/project
     steps:
       - checkout
       - run:
           name: "yarn"
-          command: cd ~/project && yarn
+          command: yarn
 
       - run:
           name: Install dependencies
@@ -25,19 +25,19 @@ jobs:
 
       - run:
           name: "dump"
-          command: ~/project/node_modules/.bin/dato dump
+          command: /node_modules/.bin/dato dump
 
       - run:
           name: "generate website"
-          command: cd ~/project && hugo -v
+          command: hugo -v
 
       - run:
           name: "list stuff"
-          command: cd ~/project && ls -la
+          command: ls -la
 
       - run:
           name: "list public stuff"
-          command: cd ~/project/public && ls -la
+          command: ls -la
 
 
       - deploy:
