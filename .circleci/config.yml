@@ -20,16 +20,16 @@ jobs:
           command: sudo dpkg -i hugo*.deb
 
       - run:
-          name: "list stuff"
-          command: ls -la
-
-      - run:
           name: "dump"
           command: ./node_modules/.bin/dato dump
 
       - run:
           name: "generate website"
           command: hugo -v
+
+      - run:
+          name: "list stuff"
+          command: ls -la
 
       - run:
           name: Install dependencies
