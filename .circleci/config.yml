@@ -16,8 +16,8 @@ jobs:
           command: sudo apt-get -y -qq install awscli
 
       - run:
-          name: "hugo"
-          command: wget https://github.com/spf13/hugo/releases/download/v0.19/hugo_0.19-64bit.deb
+          name: "download"
+          command: wget https://github.com/gohugoio/hugo/releases/download/v0.26/hugo_0.26_Linux-64bit.deb
 
       - run:
           name: "install hugo"
@@ -29,7 +29,7 @@ jobs:
 
       - run:
           name: "generate website"
-          command: cd ~/project && hugo -d public
+          command: cd ~/project && hugo -v
 
       - run:
           name: "list stuff"
