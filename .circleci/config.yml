@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: felicianotech/docker-hugo:0.26
+      - image: circleci/node:latest
     working_directory: ~/project
     steps:
       - checkout
