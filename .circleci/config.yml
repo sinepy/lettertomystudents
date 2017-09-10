@@ -24,21 +24,16 @@ jobs:
           command: sudo dpkg -i hugo*.deb
 
       - run:
+          name: "list stuff"
+          command: ls -la
+
+      - run:
           name: "dump"
           command: /node_modules/.bin/dato dump
 
       - run:
           name: "generate website"
           command: hugo -v
-
-      - run:
-          name: "list stuff"
-          command: ls -la
-
-      - run:
-          name: "list public stuff"
-          command: ls -la
-
 
       - deploy:
           name: Deploy to S3 if tests pass and branch is Master
