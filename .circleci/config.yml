@@ -20,7 +20,7 @@ jobs:
 
       - run:
           name: "dump"
-          command: ./node_modules/.bin/dato dump
+          command: ~/project/node_modules/.bin/dato dump
 
       - run:
           name: "generate website"
