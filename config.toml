@@ -2,7 +2,7 @@ baseurl = "http://lettertomystudents.s3-website-ap-southeast-1.amazonaws.com/"
 googleAnalytics = "your_google_analytics_code"
 hasCJKLanguage = true
 languageCode = "en"
-theme = "hugo-theme-cactus-plus"
+theme = "hugo-themes-cactus-plus"
 title = "Letter To My Students"
 [params]
 about = ""
