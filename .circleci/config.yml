@@ -13,14 +13,10 @@ jobs:
 
       - run:
           name: Install dependencies
-          working_directory: /
           command: |
-            apt-get -y -qq update
-            apt-get -y -qq install python3.4-dev
-            curl -O https://bootstrap.pypa.io/get-pip.py
-            python3.4 get-pip.py --user
+            apt install python-pip python-dev
             pip install awscli --upgrade --user
-            
+
       - run:
           name: "hugo"
           command: wget https://github.com/spf13/hugo/releases/download/v0.19/hugo_0.19-64bit.deb
