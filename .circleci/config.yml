@@ -20,3 +20,7 @@ deployment:
     branch: master
     commands:
       - aws s3 sync public s3://lettertomystudents/ --delete
+
+notify:
+  webhooks:
+  - url: https://webhooks.datocms.com/3bc1b8f6d20061e77417/deploy-results
