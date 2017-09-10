@@ -33,7 +33,7 @@ jobs:
 
       - run:
           name: "generate website"
-          command: cd ~/project && hugo
+          command: cd ~/project && hugo -v
 
       - deploy:
           name: Deploy to S3 if tests pass and branch is Master

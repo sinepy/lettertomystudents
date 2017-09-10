@@ -13,7 +13,6 @@ module.exports = (dato, root, i18n) => {
         frontmatter: {
           title: article.title,
           type: "post",
-          date: article.publishedAt,
         },
         content: article.textContent
       });
