@@ -7,8 +7,8 @@ jobs:
 
     steps:
       - run:
-          name: "npm"
-          command: npm install
+          name: "yarn"
+          command: yarn
 
       - run:
           name: "hugo"
