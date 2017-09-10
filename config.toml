@@ -1,4 +1,4 @@
-baseurl = "http://lettertomystudents.s3-website-ap-southeast-1.amazonaws.com/"
+baseurl = "http://lettertomystudents.s3-website-ap-southeast-1.amazonaws.com"
 googleAnalytics = "your_google_analytics_code"
 hasCJKLanguage = true
 languageCode = "en"
