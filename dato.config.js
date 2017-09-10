@@ -3,7 +3,7 @@
 module.exports = (dato, root, i18n) => {
 
   // inside a "post" directory...
-  root.directory("src/content/post", (dir) => {
+  root.directory("content/post", (dir) => {
 
     // ...iterate over the "Blog post" records...
     dato.articles.forEach((article) => {

@@ -1,14 +1,22 @@
-version: 2
-jobs:
-  build:
-    docker:
-      - image: felicianotech/docker-hugo:0.26
-    working_directory: ~/project
-    steps:
-      - checkout
-      - run:
-          name: "Run Hugo"
-          command: HUGO_ENV=production hugo -v -s src/
-      - run:
-          name: "Test Website"
-          command: htmlproofer src/public --allow-hash-href --check-html --empty-alt-ignore --disable-external
+machine:
+  node:
+    version: 6.7.0
+dependencies:
+  override:
+    # if your project uses Yarn as package manager, replace "npm install" with "yarn"
+    - npm install
+    # download latest version of hugo
+    - wget https://github.com/spf13/hugo/releases/download/v0.19/hugo_0.19-64bit.deb
+    # install it
+    - sudo dpkg -i hugo*.deb
+test:
+  override:
+    # first dump all the remote content as local files
+    - ./node_modules/.bin/dato dump
+    # then generate the website
+    - hugo
+deployment:
+  production:
+    branch: master
+    commands:
+      - aws s3 sync public s3://lettertomystudents/ --delete
