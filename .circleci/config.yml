@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:7.10.01
+      - image: circleci/node:6.3.0
     working_directory: ~/project
     steps:
       - checkout
