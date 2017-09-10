@@ -4,8 +4,9 @@ jobs:
   build:
     docker:
       - image: circleci/node:4.8.2
-
+    working_directory: ~/project
     steps:
+      - checkout
       - run:
           name: "yarn"
           command: cd ~/project && yarn
@@ -17,6 +18,10 @@ jobs:
       - run:
           name: "install hugo"
           command: sudo dpkg -i hugo*.deb
+
+      - run:
+          name: "list stuff"
+          command: cd ~/project && ls -la
 
       - run:
           name: "dump"
