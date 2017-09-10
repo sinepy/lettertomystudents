@@ -8,7 +8,7 @@ jobs:
     steps:
       - run:
           name: "yarn"
-          command: yarn
+          command: cd ~/project && yarn
 
       - run:
           name: "hugo"
@@ -24,7 +24,7 @@ jobs:
 
       - run:
           name: "generate website"
-          command: hugo
+          command: cd ~/project && hugo
 
       - deploy:
           name: Deploy to S3 if tests pass and branch is Master
