@@ -27,12 +27,12 @@ jobs:
           name: "generate website"
           command: hugo -v
 
-    deployment:
-      production:
-        branch: master
-        heroku:
-          appname: lettertomystudents
+deployment:
+  production:
+    branch: master
+    heroku:
+      appname: lettertomystudents
 
-    notify:
-      webhooks:
-      - url: https://webhooks.datocms.com/3bc1b8f6d20061e77417/deploy-results
+notify:
+  webhooks:
+  - url: https://webhooks.datocms.com/3bc1b8f6d20061e77417/deploy-results
