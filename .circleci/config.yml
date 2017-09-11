@@ -27,14 +27,6 @@ jobs:
           name: "generate website"
           command: hugo -v
 
-      # - run:
-      #     name: "list stuff"
-      #     command: ls -la
-      #
-      # - run:
-      #     name: Install dependencies
-      #     command: sudo apt-get -y -qq install awscli
-
     deployment:
       production:
         branch: master
